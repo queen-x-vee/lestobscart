@@ -32,7 +32,7 @@ const RetailStores = () => {
                 (asset)=>{
                     return(
                         <div key={asset.id} className=''>
-                        <img draggable='false' src={asset.imgsrc} className='w-full h-70'/>
+                        <img alt='stores' draggable='false' src={asset.imgsrc} className='w-full h-70'/>
                         <h3 className='my-20'>{asset.name}</h3>
                         </div>
                     )
