@@ -9,7 +9,7 @@ const Products = () => {
     <h3 className='inline-block mx-8 my-4 font-mono text-lg font-semibold'>
         Grocery Selection
     </h3>
-    <div className='flex justify-around px-16 w-full  pb-12  bg-violet-500'>
+    <div className='flex justify-around px-16 w-full  pb-12 '>
         {FruitData.map((fruit)=>{
             return(
                 <Fruit
