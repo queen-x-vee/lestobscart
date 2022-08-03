@@ -1,7 +1,7 @@
-import fruit1 from '../../../assets/fruit1.jpg'
-import fruit2 from '../../../assets/fruit2.jpg'
-import fruit3 from '../../../assets/fruit3.jpg'
-import fruit4 from '../../../assets/fruit4.jpg'
+import fruit1 from '../assets/fruit1.jpg'
+import fruit2 from '../assets/fruit2.jpg'
+import fruit3 from '../assets/fruit3.jpg'
+import fruit4 from '../assets/fruit4.jpg'
 
 
 const FruitData = [
@@ -18,7 +18,7 @@ const FruitData = [
     title:'strawberries',
     price: 50,
     imgsrc: fruit2,
-    description:''
+    description:'Strawberries from South Africa'
 
  },
  {

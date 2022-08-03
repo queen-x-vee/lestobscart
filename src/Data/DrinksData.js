@@ -1,7 +1,7 @@
-import drink1 from '../../../assets/coke2.jpg'
-import drink2 from '../../../assets/pepsi.jpg'
-import drink3 from '../../../assets/fanta2.jpg'
-import drink4 from '../../../assets/mountain-dew.jpg'
+import drink1 from '../assets/coke2.jpg'
+import drink2 from '../assets/pepsi.jpg'
+import drink3 from '../assets/fanta2.jpg'
+import drink4 from '../assets/mountain-dew.jpg'
 
 
 const DrinksData = [

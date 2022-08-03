@@ -1,8 +1,10 @@
 import React from 'react'
-import FruitData from './Product/FruitData'
+import FruitData from '../../Data/FruitData'
 import Fruit from './Product/Fruit'
-import DrinksData from './Product/DrinksData'
+import DrinksData from '../../Data/DrinksData'
 import Drinks from './Product/Drinks'
+import { Link } from 'react-router-dom'
+import PortalDemo from './Product/PortalDemo'
 const Products = () => {
   return (
     <>
@@ -10,6 +12,7 @@ const Products = () => {
         Grocery Selection
     </h3>
     <div className='flex justify-around px-16 w-full  pb-12 '>
+        
         {FruitData.map((fruit)=>{
             return(
                 <Fruit
@@ -17,10 +20,12 @@ const Products = () => {
                 imgsrc = {fruit.imgsrc} 
                 title = {fruit.title}
                 price = {fruit.price}
+                description = {fruit.description}
                 
                 />
             )
         })}
+        {/*<PortalDemo/>*/}
     </div>
 
     <h3 className='inline-block mx-8 my-4 font-mono text-lg font-semibold' >

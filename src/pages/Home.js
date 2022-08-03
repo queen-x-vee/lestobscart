@@ -5,6 +5,7 @@ import Products from '../components/Products/Products'
 import RetailStores from '../components/RetailStores/RetailStores'
 
 const Home = () => {
+ 
   return (
     <>
         <Navbar/>

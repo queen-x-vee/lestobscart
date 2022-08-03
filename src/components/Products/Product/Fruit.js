@@ -1,31 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ReactDOM  from 'react-dom'
+import { BrowserRouter, Link, Route } from 'react-router-dom'
+import PortalDemo from './PortalDemo'
 
 
-const Fruit = (props) => {
+const Fruit = ({imgsrc, title,price, description}) => {
+  const [modal, setModal] = useState(false)
+  const handleShowMessage = ()=>{
+    setModal(!modal)
+  }
+  
+  const closeModal = ()=>{
+    setModal(!modal)
+  }
   return (
-    <>
-      
+    <> 
       <div className='w-1/4 h-45 mx-18 flex flex-col items-center justify-center border-b-2'>
         <div>
-          <img src={props.imgsrc} className='w-20 h-20 rounded-full' alt='imag' />
+          <img src={imgsrc} className='w-20 h-20 rounded-full' alt='imag' />
         </div>
-
-        <div className='font-mono text-base font-medium'>
-          <h4 className=''>
-            {props.title}
+        <div className='font-mono text-base font-medium flex flex-col'>
+          <h4 className='text-center'>
+            {title}
           </h4>
-          <div className='mb-8 '>
+          <div className=' mb-8 flex flex-row justify-around'>
             <span>
-              ${props.price}
+              ${price}
             </span>
-            {/*<span className='m'>
-              <FaShoppingCart />
-              </span>*/}
+            
+            <button className='ml-4 text-bold' onClick={handleShowMessage}>Buy</button>
+            {modal? (<PortalDemo 
+            closeModal={closeModal}
+            title={title}
+            image={imgsrc}
+            description={description}/>): null}
           </div>
           
-
+   
         </div>
+
+        
+        
       </div >
+      
       
     </>
   )
