@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import ReactDOM  from 'react-dom'
-import { BrowserRouter, Link, Route } from 'react-router-dom'
 import PortalDemo from './PortalDemo'
 
 

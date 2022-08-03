@@ -3,8 +3,7 @@ import FruitData from '../../Data/FruitData'
 import Fruit from './Product/Fruit'
 import DrinksData from '../../Data/DrinksData'
 import Drinks from './Product/Drinks'
-import { Link } from 'react-router-dom'
-import PortalDemo from './Product/PortalDemo'
+
 const Products = () => {
   return (
     <>

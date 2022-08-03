@@ -22,7 +22,7 @@ function PortalDemo(props) {
         
         <div className='p-6 bg-white rounded inline-block h-full m-12 relative w-full justify-self-center grid grid-cols-2 gap-12'>
             <div>
-                <img src={props.image}/>
+                <img src={props.image} alt='fruit'/>
             </div>
             <div className='flex flex-col justify-center text-center'>
                <h1 className='inline-block'>

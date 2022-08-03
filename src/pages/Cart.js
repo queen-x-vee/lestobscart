@@ -1,12 +1,11 @@
 import React from 'react'
 import FruitData from '../Data/FruitData'
-import Navbar from '../components/Navbar/Navbar'
-import DrinksData from '../Data/DrinksData'
+
 
 
 const Cart = () => {
 
-  const { id, title,price,imgsrc, description } = FruitData[1]
+  const { title,imgsrc, description } = FruitData[1]
   return (
     <>
     <div className='bg-white rounded overflow-hidden shadow-md w-1/4'>
