@@ -24,29 +24,27 @@ const Cart = () => {
     </Link></div>
   return (
     <>
-    <div className='w-full h-full bg-zinc-50'>
-      <section className='py-4 container bg-purple-200 '>
-        <div className='flex justify-center flex-col items-center'>
-          <div className=''>
+    
+          <div className='border-box'>
             <h5> Cart ({totalUniqueItems}) total items: ({totalItems})</h5>
-            <table className='table-auto border  m-12'>
-              <tbody className='table-row-group'>
+            <div className=' '>
+              <div className=''>
                 {items.map((item) => {
                   return (
-                    <tr key={item.id} className=' bg-violet-100 table-row hover:bg-purple-100'>
-                      <td className='table-cell p-4'>
-                        <img src={item.imgsrc} className='h-24 ' alt ='carts'/>
-                      </td>
-                      <td className='table-cell p-4'>
+                    <div key={item.id} className=' bg-violet-100 flex flex-col justify-center items-center m-16 border-b-black'>
+                      <div className='w-1/4'>
+                        <img src={item.imgsrc} className='h-24 w-full ' alt ='carts'/>
+                      </div>
+                      <h3 >
                         {item.title}
-                      </td>
-                      <td className='table-cell p-4'>
+                      </h3>
+                      <h3 >
                         {item.price}
-                      </td>
-                      <td className='table-cell p-4'>
+                      </h3>
+                      <h3 >
                         Quantity({item.quantity})
-                      </td>
-                      <td className='table-cell p-4'>
+                      </h3>
+                      <div className=''>
                         <button
                           className='py-0.75 px-3 bg-transparent hover:bg-black hover:text-white border border-black rounded m-3 '
                           onClick={() => updateItemQuantity(item.id, item.quantity - 1)}> - </button>
@@ -56,11 +54,11 @@ const Cart = () => {
                         <button
                         className='py-0.75 px-3 bg-red-600 hover:bg-red-500 hover:text-white rounded text-stone-800 mx-6 '
                          onClick={() => removeItem(item.id)}>Remove</button>
-                      </td>
-                    </tr>)
+                      </div>
+                    </div>)
                 })}
-              </tbody>
-          </table>
+              </div>
+          </div>
         </div>
         <div>
           <h2>Total : $ {cartTotal}</h2>
@@ -72,9 +70,7 @@ const Cart = () => {
            onClick={() => emptyCart()}>Clear cart</button>
           
         </div>
-      </div>
-    </section>
-    </div>
+      
     </>
   )
 }

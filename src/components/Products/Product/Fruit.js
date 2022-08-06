@@ -19,22 +19,22 @@ const Fruit = ({imgsrc, title,price, description, item}) => {
   const {addItem } = useCart()
   return (
     <> 
-      <div className='w-1/4 h-45 mx-18 flex flex-col items-center justify-center border-b-2
-       sm:w-full sm:overflow-hidden sm:flex s' >
+      <div className='md:w-1/4 md:h-45 md:mx-18 md:flex md:flex-col md:items-center md:justify-center md:border-b-2
+       sm:w-full  sm:mx-18 sm:border-none ' >
         <div>
           <img src={imgsrc} className='w-20 h-20 rounded-full' alt='imag' onClick={handleShowMessage} />
         </div>
         <div className='font-mono text-base font-medium flex flex-col'>
-          <h4 className='text-center'>
+          <h4 className=''>
             {title}
           </h4>
-          <div className=' mb-8 flex flex-row justify-around sm:flex sm:flex-col sm:items-center sm:justify-center'>
+          <div className=' md:mb-8 md:flex md:flex-row md:justify-around sm:flex sm:flex-col '>
             <span>
               ${price}
             </span>
             
             {/*<button className='ml-4 text-bold' onClick={handleShowMessage}>Buy</button>*/}
-            <MdAddShoppingCart size={20} className='ml-4 text-bold sm:ml-0' onClick={()=>addItem(item)}/>
+            <MdAddShoppingCart size={20} className='md:ml-4 md:text-bold sm:ml-0' onClick={()=>addItem(item)}/>
             {modal? (<PortalDemo 
             closeModal={closeModal}
             title={title}

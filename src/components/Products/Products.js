@@ -10,8 +10,9 @@ const Products = () => {
     <h3 className='inline-block mx-8 my-4 font-mono text-lg font-semibold '>
         Grocery Selection
     </h3>
-    <div className='flex justify-around px-16 w-full  pb-12 
-    sm:flex sm:flex-col-4 sm:mx-0 sm:px-4 sm:w-full'>
+    <div className='md:flex md:justify-around md:px-16 md:w-full  md:pb-12 
+    sm:grid sm:grid-rows-2 sm:grid-flow-col sm:mx-4 sm:px-4 sm:w-full 
+    '>
         
         {FruitData.map((fruit)=>{
             return(
@@ -32,8 +33,9 @@ const Products = () => {
     <h3 className='inline-block mx-8 my-4 font-mono text-lg font-semibold' >
         Grocery Selection
     </h3>
-    <div className='flex justify-around px-16 w-full pb-12
-    sm:flex sm:flex-col-4 sm:mx-0 sm:px-4 sm:w-full '>
+    <div className='md:flex md:justify-around md:px-16 md:w-full  md:pb-12 
+     sm:grid sm:grid-rows-2 sm:grid-flow-col sm:mx-4 sm:px-4 sm:w-full 
+     '>
         {FruitData.map((fruit)=>{
             return(
                 <Fruit
@@ -50,8 +52,9 @@ const Products = () => {
     <h3 className='inline-block mx-8 my-4 font-mono text-lg font-semibold' >
         Grocery Selection
     </h3>
-    <div className='flex justify-around px-16 w-full pb-12
-    sm:flex sm:flex-col-4 sm:mx-0 sm:px-4 sm:w-full '>
+    <div className='md:flex md:justify-around md:px-16 md:w-full  md:pb-12 
+     sm:grid sm:grid-rows-2 sm:grid-flow-col sm:mx-4 sm:px-4 sm:w-full 
+     '>
         {DrinksData.map((drink)=>{
             return(
                 <Drinks
