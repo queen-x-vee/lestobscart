@@ -11,7 +11,8 @@ const Products = () => {
         Grocery Selection
     </h3>
     <div className='flex justify-around px-16 w-full  pb-12 
-    sm:flex sm:flex-col-4 sm:mx-0 sm:px-4 sm:w-full'>
+    sm:grid sm:grid-rows-2 sm:grid-flow-col sm:mx-4 sm:px-4 sm:w-full 
+    '>
         
         {FruitData.map((fruit)=>{
             return(
@@ -33,7 +34,8 @@ const Products = () => {
         Grocery Selection
     </h3>
     <div className='flex justify-around px-16 w-full pb-12
-    sm:flex sm:flex-col-4 sm:mx-0 sm:px-4 sm:w-full '>
+     sm:grid sm:grid-rows-2 sm:grid-flow-col sm:mx-4 sm:px-4 sm:w-full 
+     '>
         {FruitData.map((fruit)=>{
             return(
                 <Fruit
@@ -51,7 +53,8 @@ const Products = () => {
         Grocery Selection
     </h3>
     <div className='flex justify-around px-16 w-full pb-12
-    sm:flex sm:flex-col-4 sm:mx-0 sm:px-4 sm:w-full '>
+     sm:grid sm:grid-rows-2 sm:grid-flow-col sm:mx-4 sm:px-4 sm:w-full 
+     '>
         {DrinksData.map((drink)=>{
             return(
                 <Drinks
