@@ -19,7 +19,8 @@ const Fruit = ({imgsrc, title,price, description, item}) => {
   const {addItem } = useCart()
   return (
     <> 
-      <div className='w-1/4 h-45 mx-18 flex flex-col items-center justify-center border-b-2'>
+      <div className='w-1/4 h-45 mx-18 flex flex-col items-center justify-center border-b-2
+       sm:w-full sm:overflow-hidden sm:flex s' >
         <div>
           <img src={imgsrc} className='w-20 h-20 rounded-full' alt='imag' onClick={handleShowMessage} />
         </div>
@@ -27,13 +28,13 @@ const Fruit = ({imgsrc, title,price, description, item}) => {
           <h4 className='text-center'>
             {title}
           </h4>
-          <div className=' mb-8 flex flex-row justify-around'>
+          <div className=' mb-8 flex flex-row justify-around sm:flex sm:flex-col sm:items-center sm:justify-center'>
             <span>
               ${price}
             </span>
             
             {/*<button className='ml-4 text-bold' onClick={handleShowMessage}>Buy</button>*/}
-            <MdAddShoppingCart size={20} className='ml-4 text-bold' onClick={()=>addItem(item)}/>
+            <MdAddShoppingCart size={20} className='ml-4 text-bold sm:ml-0' onClick={()=>addItem(item)}/>
             {modal? (<PortalDemo 
             closeModal={closeModal}
             title={title}
