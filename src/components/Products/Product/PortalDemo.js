@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { BiArrowBack } from 'react-icons/bi'
 
 
+
 function PortalDemo(props) {
     const [count, setCount] = React.useState(0)
     const add = () => {
@@ -11,6 +12,7 @@ function PortalDemo(props) {
     const subtract = () => {
         setCount(prevCount => prevCount - 1)
     }
+   
 
     return ReactDOM.createPortal(
 
@@ -40,7 +42,9 @@ function PortalDemo(props) {
                             <button onClick={add} > + </button>
                         </span>
                     </div>
-                    <button className=' bg-lime-500 py-4 px-2 m-8 rounded text-xl font-mono font-bold w-3/4'>ADD TO CART</button>
+                    <button
+                     className=' bg-lime-500 py-4 px-2 m-8 rounded text-xl font-mono font-bold w-3/4' 
+                     onClick={props.addItem}>ADD TO CART</button>
                 </div>
 
             </div>

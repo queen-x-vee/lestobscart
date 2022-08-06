@@ -20,6 +20,7 @@ const Products = () => {
                 title = {fruit.title}
                 price = {fruit.price}
                 description = {fruit.description}
+                item = {fruit}
                 
                 />
             )

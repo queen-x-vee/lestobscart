@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import PortalDemo from './PortalDemo'
+import { MdAddShoppingCart } from 'react-icons/md'
+import { useCart } from 'react-use-cart'
 
 
-const Fruit = ({imgsrc, title,price, description}) => {
+
+const Fruit = ({imgsrc, title,price, description, item}) => {
   const [modal, setModal] = useState(false)
   const handleShowMessage = ()=>{
     setModal(!modal)
@@ -11,11 +14,14 @@ const Fruit = ({imgsrc, title,price, description}) => {
   const closeModal = ()=>{
     setModal(!modal)
   }
+
+
+  const {addItem } = useCart()
   return (
     <> 
       <div className='w-1/4 h-45 mx-18 flex flex-col items-center justify-center border-b-2'>
         <div>
-          <img src={imgsrc} className='w-20 h-20 rounded-full' alt='imag' />
+          <img src={imgsrc} className='w-20 h-20 rounded-full' alt='imag' onClick={handleShowMessage} />
         </div>
         <div className='font-mono text-base font-medium flex flex-col'>
           <h4 className='text-center'>
@@ -26,7 +32,8 @@ const Fruit = ({imgsrc, title,price, description}) => {
               ${price}
             </span>
             
-            <button className='ml-4 text-bold' onClick={handleShowMessage}>Buy</button>
+            {/*<button className='ml-4 text-bold' onClick={handleShowMessage}>Buy</button>*/}
+            <MdAddShoppingCart size={20} className='ml-4 text-bold' onClick={()=>addItem(item)}/>
             {modal? (<PortalDemo 
             closeModal={closeModal}
             title={title}
