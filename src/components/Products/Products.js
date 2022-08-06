@@ -11,7 +11,7 @@ const Products = () => {
         Grocery Selection
     </h3>
     <div className='md:flex md:justify-around md:px-16 md:w-full  md:pb-12 
-    sm:grid sm:grid-rows-2 sm:grid-flow-col sm:mx-4 sm:px-4 sm:w-full 
+    sm:grid sm:grid-rows-2 sm:grid-flow-col  sm:mx-4 sm:px-4 sm:w-full sm:pb-12 
     '>
         
         {FruitData.map((fruit)=>{
